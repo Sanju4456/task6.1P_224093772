@@ -27,18 +27,8 @@ public class WeatherAndMathUtilsTest {
     	Assert.assertEquals("Dangerous Level Alert", WeatherAndMathUtils.weatherAdvice(70.1, 0.0));
     }
     
-    // Add more test cases to improve coverage
+    // Additional tests for LoopFunctions
     
-    @Test
-    public void testPrecipitationAboveThreshold() {
-        Assert.assertEquals("Warning Level Alert", WeatherAndMathUtils.weatherAdvice(30.0, 5.0));
-    }
-    
-    @Test
-    public void testWindSpeedAboveThreshold() {
-        Assert.assertEquals("Warning Level Alert", WeatherAndMathUtils.weatherAdvice(50.0, 2.0));
-    }
-
     @Test
     public void testSumNumbers() {
         Assert.assertEquals(15, WeatherAndMathUtils.sumNumbers(5)); // Sum of first 5 natural numbers
@@ -49,6 +39,9 @@ public class WeatherAndMathUtilsTest {
         int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         Assert.assertEquals(5, WeatherAndMathUtils.countEvenNumbers(numbers)); // Count of even numbers in the array
     }
+    
+    // Additional tests for WeatherAndMathUtils
+    
     @Test
     public void testDangerousRainfall() {
         Assert.assertEquals("Dangerous Level Alert", WeatherAndMathUtils.weatherAdvice(30.0, 7.0)); // More than 6 inches of rainfall
@@ -74,7 +67,8 @@ public class WeatherAndMathUtilsTest {
         Assert.assertEquals("Warning Level Alert", WeatherAndMathUtils.weatherAdvice(50.0, 2.0)); // Rainfall below 4 inches but windspeed greater than 45 mph
     }
     
-
+    @Test
+    public void testAllClear() {
+        Assert.assertEquals("All-Clear Alert", WeatherAndMathUtils.weatherAdvice(30.0, 2.0)); // Neither dangerous nor warning conditions met
     }
-
-
+}

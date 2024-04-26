@@ -22,8 +22,8 @@ public class WeatherAndMathUtils {
         } else if (windSpeed > 45.0 || precipitation > 4.0) {
             return "Warning Level Alert";
         } 
-
-		String advice = "ALL CLEAR";
+	    
+		String advice = "All-Clear Alert";
 
 		if (windSpeed > DANGEROUS_WINDSPEED || precipitation > DANGEROUS_RAINFALL
 				|| (windSpeed > CONCERNING_WINDSPEED && precipitation > CONCERNING_RAINFALL)) {
